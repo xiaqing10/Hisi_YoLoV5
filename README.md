@@ -5,6 +5,10 @@
 ### 参考官方的yolov5 4.0版本
 + git clone -b v4.0 https://github.com/ultralytics/yolov5.git/ 
 
+### 修改处0, models/yolov5s.py  增加如下:
+
++    ~~[[-1, 1, Focus, [64, 3]],  # 0-P1/2 ~~
++   添加 [[-1, 1, Conv, [64, 3, 2]],  # 0-P1/2
 
 ### 修改处1, utils/activations.py  增加如下:
     class ReLU(nn.Module): 
